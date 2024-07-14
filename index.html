@@ -13,23 +13,29 @@
   </header>
 
   <!-- Req 1: This application should have a form with five inputs that collect a new employee's *first name, last name, ID number, job title, annual salary*.-->
+  
   <form id="employee-form"> <!--How to create form: https://www.w3schools.com/html/html_forms.asp-->
     <label for="fname">First name:</label>
-    <input type="text" id="fname" required><br>
+    <input type="text" id="fname" required><br><br>
+    <class data-testid="firstNameInput"></class>
 
     <label for="lname">Last name:</label>
     <input type="text" id="lname" required><br><br>
+    <class data-testid="lastNameInput"></class>
 
     <label for="id-number">ID Number:</label>
     <input type="text" id="id-number" required><br><br>
+    <class data-testid="idInput"></class>
 
     <label for="job-title">Job Title:</label>
     <input type="text" id="job-title" required><br><br>
+    <class data-testid="titleInput"></class>
 
     <label for="annual-salary">Annual Salary:</label>
     <input type="text" id="annual-salary" required><br><br>
+    <class data-testid="annualSalaryInput"></class>
 
-    <input type="submit" value="Submit">
+    <input type="submit" value="Submit"> <!-- Req 2: Submit Button-->
   </form>
 
   <main>
