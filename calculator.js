@@ -12,3 +12,5 @@
 // * You must use a `<table>` element, where each employee is represented by a single `<tr>`.
 // * The *total monthly* cost must be rendered somewhere inside the `<footer>` element.
 // * The `over-budget` CSS class must be applied to the `<footer>` element when the total monthly salary exceeds $20,000.
+
+

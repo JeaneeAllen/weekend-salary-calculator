@@ -12,34 +12,34 @@
     <h1>Salary Calculator</h1>
   </header>
 
-  <!-- Req 1: This application should have a form with five inputs that collect a new employee's *first name, last name, ID number, job title, annual salary*.-->
-
-  <form id="employee-form"> <!--How to create form: https://www.w3schools.com/html/html_forms.asp-->
-    <label for="fname">First name:</label>
-    <input type="text" id="fname" required><br><br>
-    <class data-testid="firstNameInput"></class>
-
-    <label for="lname">Last name:</label>
-    <input type="text" id="lname" required><br><br>
-    <class data-testid="lastNameInput"></class>
-
-    <label for="id-number">ID Number:</label>
-    <input type="text" id="id-number" required><br><br>
-    <class data-testid="idInput"></class>
-
-    <label for="job-title">Job Title:</label>
-    <input type="text" id="job-title" required><br><br>
-    <class data-testid="titleInput"></class>
-
-    <label for="annual-salary">Annual Salary:</label>
-    <input type="text" id="annual-salary" required><br><br>
-    <class data-testid="annualSalaryInput"></class>
-
-    <input type="submit" value="Submit"> <!-- Req 2: Submit Button-->
-  </form>
-
   <main>
     <h2>Add Employee</h2>
+    <!-- Req 1: This application should have a form with five inputs that collect a new employee's *first name, last name, ID number, job title, annual salary*.-->
+
+    <form id="employee-form"> <!--How to create form: https://www.w3schools.com/html/html_forms.asp-->
+      <label for="fname">First name:</label>
+      <input type="text" id="fname" required><br><br>
+      <class data-testid="firstNameInput"></class>
+
+      <label for="lname">Last name:</label>
+      <input type="text" id="lname" required><br><br>
+      <class data-testid="lastNameInput"></class>
+
+      <label for="id-number">ID Number:</label>
+      <input type="text" id="id-number" required><br><br>
+      <class data-testid="idInput"></class>
+
+      <label for="job-title">Job Title:</label>
+      <input type="text" id="job-title" required><br><br>
+      <class data-testid="titleInput"></class>
+
+      <label for="annual-salary">Annual Salary:</label>
+      <input type="text" id="annual-salary" required><br><br>
+      <class data-testid="annualSalaryInput"></class>
+
+      <input type="submit" value="Submit"> <!-- Req 2: Submit Button-->
+    </form>
+
     <h2>Employees</h2>
     <table id="employee-table">
       <!-- Req 3: You must use a `<table>` element, where each employee is represented by a single `<tr>`.-->
@@ -51,13 +51,25 @@
           <th>ID Number</th>
           <th>Job Title</th>
           <th>Annual Salary</th>
+          <th></th>
 
         </tr>
       </thead>
+      <tbody id="employee-rows">
 
+      </tbody>
+
+      <tfoot id="footer">
+        <tr>
+          <td>Total Monthly Cost</td>
+          <td id="total-monthly-cost">$0</td>
+        </tr>
+
+      </tfoot>
 
     </table>
   </main>
+
   <footer>
     <p>Total Monthly</p>
   </footer>
