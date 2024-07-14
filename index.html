@@ -1,14 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="style.css">
   <title>Salary Calculator</title>
 </head>
+
 <body>
   <header>
     <h1>Salary Calculator</h1>
   </header>
+
+  <!-- Req 1: This application should have a form with five inputs that collect a new employee's *first name, last name, ID number, job title, annual salary*.-->
+  <form id="employee-form"> <!--How to create form: https://www.w3schools.com/html/html_forms.asp-->
+    <label for="fname">First name:</label>
+    <input type="text" id="fname" required><br>
+
+    <label for="lname">Last name:</label>
+    <input type="text" id="lname" required><br><br>
+
+    <label for="id-number">ID Number:</label>
+    <input type="text" id="id-number" required><br><br>
+
+    <label for="job-title">Job Title:</label>
+    <input type="text" id="job-title" required><br><br>
+
+    <label for="annual-salary">Annual Salary:</label>
+    <input type="text" id="annual-salary" required><br><br>
+
+    <input type="submit" value="Submit">
+  </form>
+
   <main>
     <h2>Add Employee</h2>
     <h2>Employees</h2>
@@ -17,4 +40,5 @@
     <p>Total Monthly</p>
   </footer>
 </body>
+
 </html>
