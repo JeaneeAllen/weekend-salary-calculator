@@ -3,8 +3,9 @@
 
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="style.css">
   <title>Salary Calculator</title>
+  <link rel="stylesheet" type="text/css" media="screen" href="styles/style.css" />
+  <script defer src = "client.js"></script>
 </head>
 
 <body>
@@ -16,28 +17,23 @@
     <h2>Add Employee</h2>
     <!-- Req 1: This application should have a form with five inputs that collect a new employee's *first name, last name, ID number, job title, annual salary*.-->
 
-    <form id="employee-form"> <!--How to create form: https://www.w3schools.com/html/html_forms.asp-->
-      <label for="fname">First name:</label>
-      <input type="text" id="fname" required><br><br>
+    <form id="employee-form" onSubmit="submitForm(event)"> <!--How to create form: https://www.w3schools.com/html/html_forms.asp-->
+      First name: <input type="text" id="fnameInput" placeholder="First Name" required><br><br>
       <class data-testid="firstNameInput"></class>
 
-      <label for="lname">Last name:</label>
-      <input type="text" id="lname" required><br><br>
+      Last name: <input type="text" id="lnameInput" placeholder="Last Name" required><br><br>
       <class data-testid="lastNameInput"></class>
 
-      <label for="id-number">ID Number:</label>
-      <input type="text" id="id-number" required><br><br>
+      ID Number: <input type="text" id="idInput" placeholder="ID Number" required><br><br>
       <class data-testid="idInput"></class>
 
-      <label for="job-title">Job Title:</label>
-      <input type="text" id="job-title" required><br><br>
+      Job Title: <input type="text" id="titleInput" placeholder="Job Title" required><br><br>
       <class data-testid="titleInput"></class>
 
-      <label for="annual-salary">Annual Salary:</label>
-      <input type="text" id="annual-salary" required><br><br>
+      Annual Salary: <input type="text" id="salaryInput" placeholder="Annual Salary" required><br><br>
       <class data-testid="annualSalaryInput"></class>
 
-      <button data-testid="submitButton">Submit</button>> <!-- Req 2: Submit Button-->
+      <button data-testid="submitButton">Submit</button> <!-- Req 2: Submit Button-->
     </form>
 
     <h2>Employees</h2>
@@ -46,12 +42,13 @@
       <thead>
         <!--How to create table: https://www.w3schools.com/tags/tag_table.asp#:~:text=The%20tag%20defines%20an,element%20defines%20a%20table%20cell.-->
         <tr>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>ID Number</th>
-          <th>Job Title</th>
-          <th>Annual Salary</th>
-          <th></th>
+          <td>First Name</td>
+          <td>Last Name</td>
+          <td>ID Number</td>
+          <td>Job Title</td>
+          <td>Annual Salary</td>
+          <td><button class="delete-btn" onclick="deleteTableRow()">Delete</button></td> 
+        
 
         </tr>
       </thead>
@@ -74,7 +71,7 @@
     <p>Total Monthly</p>
   </footer>
 
-  <script> src = "calculator.js"</script>
+
 </body>
 
 </html>
