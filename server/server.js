@@ -8,6 +8,7 @@ const port = 5001;
 // express static file serving - public is the folder name
 app.use(express.static('server/public'));
 
+
 // Start up our server
 app.listen(port, () => {
   console.log('listening on port', port);

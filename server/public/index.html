@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <title>Salary Calculator</title>
   <link rel="stylesheet" type="text/css" media="screen" href="styles/style.css" />
-  <script defer src = client.js></script>
+  <script defer src="client.js"></script>
 </head>
 
 <body>
@@ -15,58 +15,56 @@
 
   <main>
     <h2>Add Employee</h2>
-    <!-- Req 1: This application should have a form with five inputs that collect a new employee's *first name, last name, ID number, job title, annual salary*.-->
+    <!-- Form to add new employees -->
+    <form id="employee-form" onsubmit="submitForm(event)">
+      <!-- Input fields for employee information -->
+      First name: <input type="text" id="fnameInput" placeholder="First Name" required
+      data-testid="firstNameInput"><br><br>
+      Last name: <input type="text" id="lnameInput" placeholder="Last Name" required
+      data-testid="lastNameInput"><br><br>
+      ID Number: <input type="text" id="idInput" placeholder="ID Number" required
+      data-testid="idInput"><br><br>
+      Job Title: <input type="text" id="titleInput" placeholder="Job Title" required
+      data-testid="titleInput"><br><br>
+      Annual Salary: <input type="text" id="salaryInput" placeholder="Annual Salary" required
+      data-testid="annualSalaryInput"><br><br>
 
-    <form id="employee-form" onSubmit="submitForm(event)"> <!--How to create form: https://www.w3schools.com/html/html_forms.asp-->
-      First name: <input type="text" id="fnameInput" placeholder="First Name" required><br><br>
-      <class data-testid="firstNameInput"></class>
 
-      Last name: <input type="text" id="lnameInput" placeholder="Last Name" required><br><br>
-      <class data-testid="lastNameInput"></class>
-
-      ID Number: <input type="text" id="idInput" placeholder="ID Number" required><br><br>
-      <class data-testid="idInput"></class>
-
-      Job Title: <input type="text" id="titleInput" placeholder="Job Title" required><br><br>
-      <class data-testid="titleInput"></class>
-
-      Annual Salary: <input type="text" id="salaryInput" placeholder="Annual Salary" required><br><br>
-      <class data-testid="annualSalaryInput"></class>
-
-      <button data-testid="submitButton">Submit</button> <!-- Req 2: Submit Button-->
+      <!-- Submit button for the form -->
+      <button type="submit" data-testid="submitButton">Submit</button>
     </form>
 
     <h2>Employees</h2>
+    <!-- Table to display employees -->
     <table id="employee-table">
-      <!-- Req 3: You must use a `<table>` element, where each employee is represented by a single `<tr>`.-->
       <thead>
-        <!--How to create table: https://www.w3schools.com/tags/tag_table.asp#:~:text=The%20tag%20defines%20an,element%20defines%20a%20table%20cell.-->
+        <!-- Table header row -->
         <tr>
-          <td>First Name</td>
-          <td>Last Name</td>
-          <td>ID Number</td>
-          <td>Job Title</td>
-          <td>Annual Salary</td>
-          <td>Removed Data</td> 
-        
-
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>ID Number</th>
+          <th>Job Title</th>
+          <th>Annual Salary</th>
+          <th>Actions</th>
         </tr>
       </thead>
       <tbody id="employee-rows">
-
+        <!-- Employee rows will be dynamically added here -->
       </tbody>
-
       <tfoot id="footer">
+        <!-- Table footer row for total monthly cost -->
         <tr>
           <td>Total Monthly Cost</td>
-          <td id="total-monthly-cost">$0</td>
+
+          <td id="total-monthly-cost">$0.00</td>
         </tr>
-
       </tfoot>
-
     </table>
   </main>
-
+  
+  <footer>
+  
+  </footer>
 
 </body>
 
